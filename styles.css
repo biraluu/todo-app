@@ -36,13 +36,13 @@ body {
   
   li {
     padding: 10px;
-    background-color: #cf0606;
+    background-color: #d6d2d2;
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
   }
-  
 
   button.delete {
     background-color: rgb(12, 126, 86);
@@ -50,19 +50,10 @@ body {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px; /* small size */
+    width: 80px;
+    text-align: center;
   }
-  /* button.delete {
-    background-color: rgb(12, 126, 86);
-    color: rgb(249, 249, 249);
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  } */
-  
+   
   button.delete:hover {
     opacity: 0.8;
   }
