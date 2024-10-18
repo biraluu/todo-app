@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+
+
+  frontend:
+    image: biraluu/todo-frontend
+    container_name: frontend
+    build: 
+      context: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+
+  backend:
+    image: biraluu/todo-backend
+    container_name: backend
+    build:
+      context: ./backend
+    environment:
+      POSTGRES_USER: biraluu
+      POSTGRES_PASSWORD: Mnias@33
+      POSTGRES_DB: todo_db
+      POSTGRES_HOST: db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    container_name: db
+    environment: 
+      POSTGRES_USER: biraluu
+      POSTGRES_PASSWORD: Mnias@33
+      POSTGRES_DB: todo_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgres_data
+
+volumes:
+  postgres_data:
+
+
