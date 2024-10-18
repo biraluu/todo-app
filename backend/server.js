@@ -13,7 +13,7 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname,))); // Serve static files from the root directory
+app.use(express.static(path.join(__dirname,'../frontend/'))); // Serve static files from the root directory
 
 // API to fetch tasks
 app.get('/api/tasks', async (req, res) => {
@@ -40,7 +40,7 @@ app.post('/api/tasks', async (req, res) => {
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 // API to delete a task

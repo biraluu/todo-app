@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #d0d2c9;
-    background-image: url('images/image.png');
+    background-image: url('/images/image.png');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -51,7 +51,7 @@ body {
     padding: 5px 10px;
     cursor: pointer;
     width: 80px;
-    text-align: center;
+    text-align: center 
   }
    
   button.delete:hover {
