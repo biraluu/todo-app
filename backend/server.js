@@ -6,7 +6,7 @@ const path = require('path'); // Import the path module
 const app = express();
 const pool = new Pool({
     user: 'biraluu',  // Use your PostgreSQL username
-    host: 'localhost',
+    host: 'db',
     database: 'todo_db',  // Your database name
     password: 'Mnias@33', // Use your actual password
     port: 5432,
