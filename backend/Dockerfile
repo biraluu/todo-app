@@ -7,10 +7,9 @@ WORKDIR /usr/src/app
 #copy package* file in the container
 
 COPY package*.json ./
-COPY ../frontend ./
 
 #install any needed packages
-RUN npm install
+RUN npm install cors
 
 #yeta ko file utaa
 

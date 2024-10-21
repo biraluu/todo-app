@@ -6,7 +6,7 @@ const taskList = document.getElementById('task-list');
 // Fetch tasks from the database
 async function fetchTasks() {
     try {
-        const response = await fetch('/api/tasks');
+        const response = await fetch('http://backend:3000/api/tasks');
         const tasks = await response.json();
         renderTasks(tasks);
     } catch (error) {
@@ -38,7 +38,7 @@ addButton.addEventListener('click', async () => {
     const taskDescription = todoInput.value.trim();
     if (taskDescription) {
         try {
-            const response = await fetch('/api/tasks', {
+            const response = await fetch('http://backend:3000/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ xx
 // Delete a task
 async function deleteTask(taskId) {
     try {
-        await fetch(`/api/tasks/${taskId}`, {
+        await fetch(`http://backend:3000/api/tasks/${taskId}`, {
             method: 'DELETE',
         });
         fetchTasks(); // Refresh the task list
